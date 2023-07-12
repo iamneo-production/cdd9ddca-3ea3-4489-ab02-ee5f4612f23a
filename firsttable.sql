@@ -1,0 +1,1 @@
+create table ftable(fname varchar(20));
