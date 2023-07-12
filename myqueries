@@ -12,3 +12,5 @@ select count(CUSTOMERNO) FROM ECOMMERCE group by COUNTRY;
 select DISTINCT(PRODUCTNAME), YEAR_FIELD from ECOMMERCE;
 select DISTINCT(PRODUCTNAME), YEAR_FIELD from ECOMMERCE order by PRODUCTNAME, YEAR_FIELD;
 
+/* total sales amount of each product on a month basis in year 2019*------niha*/
+select sum(PRICE*QUANTITY) from ECOMMERCE;
