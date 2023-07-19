@@ -32,3 +32,6 @@ select productname from ecommerce order by productname desc;
 
 /*11.display productname in alphabetical order*/
 select productname from ecommerce order by productname;
+
+/*12.display unique customerno*/
+select distinct(CUSTOMERNO) from ECOMMERCE;
