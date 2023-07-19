@@ -29,3 +29,6 @@ select * from ecommerce;
 
 /*10.display productname in desc order*/
 select productname from ecommerce order by productname desc;
+
+/*11.display productname in alphabetical order*/
+select productname from ecommerce order by productname;
