@@ -20,16 +20,12 @@ FETCH FIRST 1 ROW ONLY;
 /*7.Get the average price of all transactions*/
 SELECT AVG(Price) AS AveragePrice FROM ecommerce;
 
-/*8.the transactions made in a specific country and within a certain price range*/
-SELECT * FROM ecommerce WHERE country = 'United Kingdom'
-  AND Price BETWEEN 1.88 AND 2.24;
-
-/*9.Find the transactions with a specific transaction number and customer number*/
+/*8.Find the transactions with a specific transaction number and customer number*/
 SELECT * FROM ecommerce WHERE Transactionno = '536384'
   AND Customerno = 16029;
 
-/*10.display table ecommerce*/
+/*9.display table ecommerce*/
 select * from ecommerce;
 
-/*11.display productname in desc order*/
+/*10.display productname in desc order*/
 select productname from ecommerce order by productname desc;
