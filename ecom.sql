@@ -1,2 +1,3 @@
-select * from ECOMMERCE;
-desc ECOMMERCE
+select distinct(country) as country
+from ecommerce
+group by customerno;
