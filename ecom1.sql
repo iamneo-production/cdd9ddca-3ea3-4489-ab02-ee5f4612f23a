@@ -1,4 +1,5 @@
 set timing on;
+
 --1.Write a sql query to how many products were sold in February 2019?--
 
 select count(PRODUCTNO) as products_sold_FEB2019 from ECOMMERCE where PURCHASE_DATE like '2019-02-%';
