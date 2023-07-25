@@ -21,14 +21,14 @@ SELECT COUNT(*) FROM ECOMMERCE WHERE substr(purchase_date,6,2) =02 AND substr(pu
 EXPLAIN PLAN FOR SELECT COUNT(*) FROM ECOMMERCE WHERE substr(purchase_date,6,2) =02 AND substr(purchase_date,1,4) =2019;
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY());
 
-SELECT substr(purchase_date,1,4),SUM(PRICE) FROM ECOMMERCE GROUP BY substr(purchase_date,1,4);
+SELECT substr(purchase_date,1,4),SUM(PRICE * QUANTITY) FROM ECOMMERCE GROUP BY substr(purchase_date,1,4);
 CREATE INDEX 
 EXPLAIN PLAN FOR   
 SELECT substr(purchase_date,1,4),SUM(PRICE) FROM ECOMMERCE GROUP BY substr(purchase_date,1,4);
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY());
 
 
-SELECT substr(purchase_date,6,2),SUM(PRICE) FROM ECOMMERCE  WHERE substr(purchase_date,1,4)=2019
+SELECT substr(purchase_date,6,2),SUM(PRICE * QUANTITY) FROM ECOMMERCE  WHERE substr(purchase_date,1,4)=2019
 GROUP BY substr(purchase_date,6,2) ORDER BY substr(purchase_date,6,2);
 EXPLAIN PLAN FOR SELECT substr(purchase_date,6,2),SUM(PRICE) FROM ECOMMERCE  WHERE substr(purchase_date,1,4)=2019
 GROUP BY substr(purchase_date,6,2) ORDER BY substr(purchase_date,6,2);
