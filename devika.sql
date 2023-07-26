@@ -1,4 +1,4 @@
-select count(*) products_sold
+select count(*) as products_sold
 from ecommerce where substr(purchase_date,1,4)='2019' and
 substr(purchase_date,6,2)='02';
 
