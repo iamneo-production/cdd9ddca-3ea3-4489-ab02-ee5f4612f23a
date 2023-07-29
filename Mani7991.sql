@@ -37,7 +37,7 @@ group by substr(purchase_date,1,4);
 
 --7.Write a sql query to display the order details of who are all ordered from country Australia?--
 
-select * from ecommerce where country='"Australia"';
+select PRODUCTNAME from ecommerce where country='"Australia"';
 
 --8.Write a sql query to display the country name in ascending order?--
 
