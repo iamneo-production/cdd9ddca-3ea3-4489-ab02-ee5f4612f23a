@@ -57,6 +57,3 @@ select max(PRODUCTNAME) from ECOMMERCE;
 
 --12.display unique customerno--
 select distinct(CUSTOMERNO) from ECOMMERCE;
-
---13. Between operator --
-select PRODUCTNAME from ECOMMERCE where PRICE between 1.88 and 2.14;
