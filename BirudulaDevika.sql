@@ -25,3 +25,4 @@ group by substr(purchase_date,1,4),productname;
 
 /* ecommerce*/
 
+
