@@ -23,4 +23,5 @@ select substr(purchase_date,1,4) as years, productname
 from ecommerce
 group by substr(purchase_date,1,4),productname;
 
+/* ecommerce*/
 
