@@ -9,7 +9,7 @@ select count(PRODUCTNO) as products_sold_FEB2019 from ECOMMERCE where PURCHASE_D
 select SUBSTR(PURCHASE_DATE,1,4) as Year,sum(PRICE*QUANTITY) as Total_Sale from ECOMMERCE 
 group by substr(PURCHASE_DATE,1,4);
 
---Another query
+--Another query--
 
 SELECT SUM(PRICE*QUANTITY) AS TOTAL,substr(PURCHASE_DATE,1,4) as Year FROM ECOMMERCE WHERE PURCHASE_DATE LIKE '201%' 
 GROUP BY SUBSTR(PURCHASE_DATE,1,4);
@@ -28,7 +28,7 @@ group by country order by CUSTOMER_COUNT desc;
 
 SELECT SUBSTR(PURCHASE_DATE,1,4) AS YEAR,PRODUCTNAME FROM ECOMMERCE GROUP BY SUBSTR(PURCHASE_DATE,1,4),PRODUCTNAME;
 
---EXTRA QUERIES--
+--EXTRA --
 
 --6.Write a sql query to count the customers from each year?--
 
