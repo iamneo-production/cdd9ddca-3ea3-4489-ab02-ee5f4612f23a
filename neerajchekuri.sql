@@ -110,5 +110,5 @@ SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE BETWEEN '2019-06-30' AND '2019-10-30
 /*Query to Find the customers who made purchases of a specific product.*/
 SELECT DISTINCT CUSTOMERNO FROM ECOMMERCE WHERE PRODUCTNO = '21934';
 
-/*Query to Get the transactions sorted in descending order of price.*/
+/*Query to Get the transaction sorted in descending order of price.*/
 SELECT * FROM ECOMMERCE ORDER BY PRICE DESC;
