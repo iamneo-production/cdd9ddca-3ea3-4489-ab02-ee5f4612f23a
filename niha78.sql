@@ -18,7 +18,6 @@ select count(CUSTOMERNO) total_customers from ECOMMERCE group by COUNTRY;
 -- 5.unique product names sold each year--
 select distinct(PRODUCTNAME), substr(PURCHASE_DATE,1,4) yearly_basis from ECOMMERCE group by substr(PURCHASE_DATE,1,4), PRODUCTNAME;
 
-
                     --Additional queries--
 --1.Find all transactions made on a particular date--
 SELECT productname FROM ecommerce WHERE purchase_date = '2019-02-02';
