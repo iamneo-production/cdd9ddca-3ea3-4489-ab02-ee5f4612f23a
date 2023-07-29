@@ -9,7 +9,11 @@ select count(PRODUCTNO) as products_sold_FEB2019 from ECOMMERCE where PURCHASE_D
 select SUBSTR(PURCHASE_DATE,1,4) as Year,sum(PRICE*QUANTITY) as Total_Sale from ECOMMERCE 
 group by substr(PURCHASE_DATE,1,4);
 
+<<<<<<< HEAD
 --Another query--
+=======
+--Another query
+>>>>>>> main
 
 SELECT SUM(PRICE*QUANTITY) AS TOTAL,substr(PURCHASE_DATE,1,4) as Year FROM ECOMMERCE WHERE PURCHASE_DATE LIKE '201%' 
 GROUP BY SUBSTR(PURCHASE_DATE,1,4);
@@ -37,7 +41,11 @@ group by substr(purchase_date,1,4);
 
 --7.Write a sql query to display the order details of who are all ordered from country Australia?--
 
+<<<<<<< HEAD
 select * from ecommerce where country='"Australia"';
+=======
+select PRODUCTNAME from ecommerce where country='"Australia"';
+>>>>>>> main
 
 --8.Write a sql query to display the country name in ascending order?--
 
