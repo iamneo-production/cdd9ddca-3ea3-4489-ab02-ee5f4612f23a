@@ -21,4 +21,4 @@ SELECT COUNTRY,COUNT(*) FROM ECOMMERCE GROUP BY COUNTRY;
 /*  5.Write a SQL Query 
 to List all the unique product names sold from each year?*/
 SELECT DISTINCT PRODUCTNAME,substr(purchase_date,1,4) AS YEAR FROM ECOMMERCE 
-GROUP BY PRODUCTNAME,substr(purchase_date,1,4) ORDER BY substr(purchase_date,1,4);
+GROUP BY PRODUCTNAME,substr(purchase_date,1,4) ORDER BY substr(purchase_date,1,4) ASC;
