@@ -1,13 +1,13 @@
 /*   sql query to find how many products were sold in february 2019     */
 
-select count(productno) total_products
-from ecommerce
-where purchase_date between '2019-02-01' and '2019-02-28';
+SELECT count(productno) total_products
+FROM ecommerce
+WHERE purchase_date between '2019-02-01' and '2019-02-28';
 
 /*  sql query to find total sale amount in each year  */
 
-select substr(PURCHASE_DATE, 1,4) AS year, sum(price) as total_sales_amount
-from ECOMMERCE
+SELECT substr(PURCHASE_DATE, 1,4) AS year, sum(price) as total_sales_amount
+FROM ECOMMERCE
 GROUP BY substr(PURCHASE_DATE, 1,4);
 
 /*  total sales amount of each product on a month-wise basis in the year 2019   */
@@ -18,11 +18,11 @@ WHERE substr(PURCHASE_DATE, 1,4) = '2019' GROUP BY substr(PURCHASE_DATE, 6,2), p
 
 /*  count the customers from each country   */
 
-select count(CUSTOMERNO) as total_customers,COUNTRY
-from ECOMMERCE
-group by country;
+SELECT count(CUSTOMERNO) as total_customers,COUNTRY
+FROM ECOMMERCE
+GROUP BY country;
 
 /*  unique product names sold from each year    */
 
-select distinct(productname),substr(PURCHASE_DATE, 1,4) AS year
-from ECOMMERCE;
+SELECT distinct(productname),substr(PURCHASE_DATE, 1,4) AS year
+FROM ECOMMERCE;
