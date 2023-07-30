@@ -19,7 +19,6 @@ where substr(PURCHASE_DATE,1,4)='2019' Group by substr(PURCHASE_DATE,6,2),PRODUC
 select count(CUSTOMERNO) as CUSTOMER_COUNT, country from ECOMMERCE 
 group by country order by CUSTOMER_COUNT desc; 
 
-
 --5.Write a sql query to List all the unique product names sold from each year?--
 
 SELECT SUBSTR(PURCHASE_DATE,1,4) AS YEAR,PRODUCTNAME FROM ECOMMERCE GROUP BY SUBSTR(PURCHASE_DATE,1,4),PRODUCTNAME;
