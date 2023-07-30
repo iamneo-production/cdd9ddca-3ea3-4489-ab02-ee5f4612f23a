@@ -63,6 +63,6 @@ select min(PRODUCTNAME) from ECOMMERCE;
 
 select Avg(price) as Average from ecommerce;
 
---14.Write a sql query to find total number of Products?--
+--14.Write a sql query to find total number of Products ?--
 
 select count(PRODUCTNAME) as Total_Products from ecommerce;
