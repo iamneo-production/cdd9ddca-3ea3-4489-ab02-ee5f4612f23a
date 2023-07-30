@@ -36,30 +36,26 @@ SELECT count(*) FROM ECOMMERCE WHERE QUANTITY < 10;
 
 SELECT DISTINCT(PRODUCTNAME) FROM ECOMMERCE WHERE PRICE = (SELECT MAX(PRICE) FROM ECOMMERCE);
 
--- 9.Get the  products with the sales revenue IN DECREASING order.
-
-SELECT PRODUCTNO, SUM(PRICE * QUANTITY) AS TOTAL_REVENUE FROM ECOMMERCE GROUP BY PRODUCTNO ORDER BY TOTAL_REVENUE ;
-
--- 10.Get the average price of products sold.
+-- 9.Get the average price of products sold.
 
 SELECT AVG(PRICE) AS AVERAGE_PRICE FROM ECOMMERCE;
 
--- 11.Get the maximum quantity sold in a single transaction.
+-- 10.Get the maximum quantity sold in a single transaction.
 
 SELECT MAX(QUANTITY) AS MAX_QUANTITY_SOLD FROM ECOMMERCE;
 
--- 12.Get the total number of transactions.
+-- 11.Get the total number of transactions.
 
 SELECT COUNT(*) AS TOTAL_TRANSACTIONS FROM ECOMMERCE;
 
--- 13.Get the Latest transaction date in the table.
+-- 12.Get the Latest transaction date in the table.
 
 SELECT MAX(PURCHASE_DATE) AS LATEST_DATE FROM ECOMMERCE;
 
--- 14.Get the total quantity sold for each product.
+-- 13.Get the total quantity sold for each product.
 
 SELECT PRODUCTNO, SUM(QUANTITY) AS TOTAL_QUANTITY FROM ECOMMERCE GROUP BY PRODUCTNO;
 
--- 15.Get the total sales revenue for transactions in a specific country.
+-- 14.Get the total sales revenue for transactions in a specific country.
 
 SELECT SUM(PRICE * QUANTITY) AS TOTAL_REVENUE FROM ECOMMERCE WHERE COUNTRY = '"United Kingdom"';
