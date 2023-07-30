@@ -56,5 +56,4 @@ select productname from ecommerce order by productname;
 --11. max productname--
 select max(PRODUCTNAME) from ECOMMERCE;
 
---12 displaying product and country--
 select PRODUCTNAME, Country from ECOMMERCE;
