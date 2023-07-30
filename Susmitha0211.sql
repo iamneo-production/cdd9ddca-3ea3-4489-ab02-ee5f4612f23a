@@ -28,9 +28,9 @@ select substr(purchase_date,1,4) as year, PRODUCTNAME  from ECOMMERCE  group by 
 
 SELECT MIN(PURCHASE_DATE) AS EARLIEST_DATE FROM ECOMMERCE;
 
--- 7.Retrieve transactions where the quantity is less than 10.
+-- 7.Retrieve count of transactions where the quantity is less than 10.
 
-SELECT * FROM ECOMMERCE WHERE QUANTITY < 10;
+SELECT count(*) FROM ECOMMERCE WHERE QUANTITY < 10;
 
 -- 8.Get the most expensive product sold.
 
@@ -48,58 +48,18 @@ SELECT AVG(PRICE) AS AVERAGE_PRICE FROM ECOMMERCE;
 
 SELECT MAX(QUANTITY) AS MAX_QUANTITY_SOLD FROM ECOMMERCE;
 
--- 12. Retrieve transactions where the customer number is null.
-
-SELECT * FROM ECOMMERCE WHERE CUSTOMERNO IS NULL;
-
--- 13.Get the total number of transactions.
+-- 12.Get the total number of transactions.
 
 SELECT COUNT(*) AS TOTAL_TRANSACTIONS FROM ECOMMERCE;
 
--- 14.Retrieve transactions where the price is greater than 100.
-
-SELECT * FROM ECOMMERCE WHERE PRICE > 100;
-
--- 15.Get the Latest transaction date in the table.
+-- 13.Get the Latest transaction date in the table.
 
 SELECT MAX(PURCHASE_DATE) AS LATEST_DATE FROM ECOMMERCE;
 
--- 16.Get the total quantity sold for each product.
+-- 14.Get the total quantity sold for each product.
 
 SELECT PRODUCTNO, SUM(QUANTITY) AS TOTAL_QUANTITY FROM ECOMMERCE GROUP BY PRODUCTNO;
 
--- 17.Get the total sales revenue for transactions in a specific country.
+-- 15.Get the total sales revenue for transactions in a specific country.
 
 SELECT SUM(PRICE * QUANTITY) AS TOTAL_REVENUE FROM ECOMMERCE WHERE COUNTRY = '"United Kingdom"';
-
--- 18.Retrieve transactions where the product name starts with "A"
-
-SELECT * FROM ECOMMERCE WHERE PRODUCTNAME LIKE '"A%';
-
--- 19.Retrieve transactions where the product name ends with "book".
-
-SELECT * FROM ECOMMERCE WHERE PRODUCTNAME LIKE '%book"';
-
---20. Retrieve transactions where the product name contains "Holder".
-
-SELECT * FROM ECOMMERCE WHERE PRODUCTNAME LIKE '%Holder%';
-
---21. Retrieve transactions with a price greater than the average price.
-
-SELECT * FROM ECOMMERCE WHERE PRICE > (SELECT AVG(PRICE) FROM ECOMMERCE);
-
---22. Retrieve transactions where the quantity is not equal to 0.
-
-SELECT * FROM ECOMMERCE WHERE QUANTITY <> 0;
-
---23. Retrieve transactions where the country is either "United States" or "Canada".
-
-SELECT * FROM ECOMMERCE WHERE COUNTRY IN ('"United States"', '"Canada"');
-
---24. Retrieve transactions where the quantity sold is the same as the price.
-
-SELECT * FROM ECOMMERCE WHERE QUANTITY = PRICE;
-
---25. Retrieve transactions where the price is a whole number (no decimal places).
-
-SELECT * FROM ECOMMERCE WHERE PRICE = ROUND(PRICE);
