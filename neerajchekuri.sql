@@ -60,10 +60,10 @@ select * from ecommerce where rownum<=5;
 SELECT COUNT(*) FROM ECOMMERCE;
 
 /*Query Find the transactions made on 2019-02-1.*/
-SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE = '2019-02-1';
+SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE = '2019-02-1' and rownum<10;
 
 /*Query to Find the transactions with a specific product name*/
-SELECT * FROM ECOMMERCE WHERE PRODUCTNAME = 'Heart Of Wicker Large';
+SELECT * FROM ECOMMERCE WHERE PRODUCTNAME = 'Heart Of Wicker Large' and rownum<10;
 
 /*Query to Calculate the total revenue from all transactions.*/
 SELECT SUM(PRICE * QUANTITY) AS TotalRevenue FROM ECOMMERCE;
@@ -72,43 +72,41 @@ SELECT SUM(PRICE * QUANTITY) AS TotalRevenue FROM ECOMMERCE;
 SELECT AVG(PRICE) AS AveragePrice FROM ECOMMERCE;
 
 /*Query to Find the transactions with a quantity greater than a certain value.*/
-SELECT * FROM ECOMMERCE WHERE QUANTITY > 10;
+SELECT * FROM ECOMMERCE WHERE QUANTITY > 10 and rownum<10;
 
 /*Query to Retrieve transactions from a specific country.*/
-SELECT * FROM ECOMMERCE WHERE COUNTRY = 'United Kingdom';
+SELECT * FROM ECOMMERCE WHERE COUNTRY = 'United Kingdom' and rownum<10;
 
 /*Query to Find the highest-priced product.*/
-SELECT * FROM ECOMMERCE WHERE PRICE = (SELECT MAX(PRICE) FROM ECOMMERCE);
+SELECT * FROM ECOMMERCE WHERE PRICE = (SELECT MAX(PRICE) FROM ECOMMERCE) and rownum<10;
 
 /*Query to Get the total quantity of a specific product sold.*/
 SELECT SUM(QUANTITY) AS TotalQuantity FROM ECOMMERCE WHERE PRODUCTNO = "22502";
 
 /*Find the customers who made purchases above a certain price.*/
-SELECT * FROM ECOMMERCE WHERE PRICE > 1000 AND CUSTOMERNO IN (SELECT DISTINCT CUSTOMERNO FROM ECOMMERCE);
+SELECT * FROM ECOMMERCE WHERE PRICE > 1000 AND CUSTOMERNO IN (SELECT DISTINCT CUSTOMERNO FROM ECOMMERCE) and rownum<10;
 
 /*Query to Retrieve the transactions made by a specific customer.*/
-SELECT * FROM ECOMMERCE WHERE CUSTOMERNO = 15098;
+SELECT * FROM ECOMMERCE WHERE CUSTOMERNO = 15098 and rownum<10;
 
 /*Find the transactions within a specific price range.*/
-SELECT * FROM ECOMMERCE WHERE PRICE BETWEEN 50 AND 100;
+SELECT * FROM ECOMMERCE WHERE PRICE BETWEEN 50 AND 100 and rownum<10;
 
 /*Calculate the average quantity of products sold per transaction.*/
 SELECT AVG(QUANTITY) AS AverageQuantity FROM ECOMMERCE;
 
 /*Query to Retrieve the latest transaction.*/
-SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE = (SELECT MAX(PURCHASE_DATE) FROM ECOMMERCE);
+SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE = (SELECT MAX(PURCHASE_DATE) FROM ECOMMERCE) and rownum<10;
 
 /*Query to Find the transactions with a specific product number and quantity greater than 5.*/
-SELECT * FROM ECOMMERCE WHERE PRODUCTNO = '22114' AND QUANTITY > 5;
+SELECT * FROM ECOMMERCE WHERE PRODUCTNO = '22114' AND QUANTITY > 5 and rownum<10;
 
 /*Query to Calculate the total revenue generated from a specific country.*/
 SELECT SUM(PRICE * QUANTITY) AS TotalRevenue FROM ECOMMERCE WHERE COUNTRY = 'United Kingdom';
 
 /*Query to Retrieve transactions made between two specific dates.*/
-SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE BETWEEN '2019-06-30' AND '2019-10-30';
+SELECT * FROM ECOMMERCE WHERE PURCHASE_DATE BETWEEN '2019-06-30' AND '2019-10-30' and rownum<10;
 
 /*Query to Find the customers who made purchases of a specific product.*/
 SELECT DISTINCT CUSTOMERNO FROM ECOMMERCE WHERE PRODUCTNO = '21934';
 
-/*Query to Get the transaction sorted in descending order of price.*/
-SELECT * FROM ECOMMERCE ORDER BY PRICE DESC;
