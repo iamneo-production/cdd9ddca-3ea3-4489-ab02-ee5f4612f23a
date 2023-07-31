@@ -1,7 +1,7 @@
 /*   sql query to find how many products were sold in february 2019     */
 
 SELECT count(productno) total_products
-FROM ecommerce
+FROM 
 WHERE purchase_date between '2019-02-01' and '2019-02-28';
 
 /*  sql query to find total sale amount in each year  */
