@@ -20,7 +20,7 @@ select distinct(PRODUCTNAME), substr(PURCHASE_DATE,1,4) as yearly_basis from ECO
 
 
                   --Additional queries--
-
+                  
 --1.Find all transactions made on a particular date--
 SELECT productname FROM ecommerce WHERE purchase_date = '2019-02-02';
 
