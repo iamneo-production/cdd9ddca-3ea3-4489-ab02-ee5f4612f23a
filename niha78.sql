@@ -36,9 +36,6 @@ SELECT SUM(Price * Quantity) AS TotalRevenue FROM ecommerce;
 --5.the transactions with a quantity greater than a specific value--
 SELECT productname FROM ecommerce WHERE Quantity >12;
 
---6.Retrieve the latest transaction made--
-SELECT productname FROM ecommerce ORDER BY purchase_date DESC
-FETCH FIRST 1 ROW ONLY;
 
 --7.Get the average price of all transactions--
 SELECT AVG(Price) AS AveragePrice FROM ecommerce;
