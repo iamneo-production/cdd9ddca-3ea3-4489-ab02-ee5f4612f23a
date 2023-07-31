@@ -5,10 +5,10 @@ select count(PRODUCTNAME) as sold_products from ECOMMERCE where PURCHASE_DATE li
 
 -- 2.total sales amount in each year--
 select sum(PRICE*QUANTITY) as total_salesamount from ECOMMERCE group by substr(PURCHASE_DATE,1,4);
-select sum(PRICE*QUANTITY) as total_salesamount, substr(PURCHASE_DATE,1,4) Yearly from ECOMMERCE group by substr(PURCHASE_DATE,1,4);
+select sum(PRICE*QUANTITY) as total_salesamount, substr(PURCHASE_DATE,1,4) as Yearly from ECOMMERCE group by substr(PURCHASE_DATE,1,4);
 
 -- 3.total sales amount of each product on month basis in year 2019--
-select PRODUCTNAME, sum(PRICE*QUANTITY) as total_salesamount, substr(PURCHASE_DATE,6,2) monthwise from ECOMMERCE where PURCHASE_DATE like '2019-%' group by PRODUCTNAME, substr(PURCHASE_DATE,6,2); 
+select PRODUCTNAME, sum(PRICE*QUANTITY) as total_salesamount, substr(PURCHASE_DATE,6,2) as monthwise from ECOMMERCE where PURCHASE_DATE like '2019-%' group by PRODUCTNAME, substr(PURCHASE_DATE,6,2); 
 select sum(PRICE*QUANTITY) as total_salesamount from ECOMMERCE where PURCHASE_DATE like '2019-%' group by PRODUCTNAME, substr(PURCHASE_DATE,6,2);
 
 -- 4.count the customers from each country--
@@ -48,7 +48,7 @@ SELECT productname FROM ecommerce WHERE Transactionno = '536384'
 select productname from ecommerce order by productname desc;
 
 --10.display productname in alphabetical order--
-select productname from ecommerce order by productname;
+select productname from ecommerce order by productname asc;
 
 --11. max productname--
 select max(PRODUCTNAME) from ECOMMERCE;
