@@ -12,7 +12,7 @@ SELECT substr(purchase_date,1,4),SUM(PRICE * QUANTITY) FROM ECOMMERCE GROUP BY s
 /* 3.Write a SQL Query
  to What was the total sales amount of each product on a month-wise basis in the year 2019?*/
 SELECT substr(purchase_date,6,2),SUM(PRICE * QUANTITY) FROM ECOMMERCE  WHERE substr(purchase_date,1,4)=2019
-GROUP BY substr(purchase_date,6,2) ORDER BY substr(purchase_date,6,2);
+GROUP BY substr(purchase_date,6,2) ORDER BY substr(purchase_date,6,2) ASC;
 
 /*4.Write a SQL Query
  to Count the Customers from each country? */
