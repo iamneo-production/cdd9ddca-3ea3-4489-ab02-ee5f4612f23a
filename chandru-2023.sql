@@ -24,5 +24,5 @@ GROUP BY country;
 
 -- unique product names sold from each year
 
-SELECT distinct(productname),substr(PURCHASE_DATE, 1,4) AS year
+SELECT distinct(productname),substr(PURCHASE_DATE, 1,4) aS year
 FROM ECOMMERCE;
