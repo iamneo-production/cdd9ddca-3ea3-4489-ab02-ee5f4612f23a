@@ -1,12 +1,7 @@
 -- sql query to find how many products were sold in february 2019
 
-<<<<<<< HEAD
-SELECT count(productno) total_products
-FROM ecommerce
-=======
 SELECT count(productno) AS total_products
 FROM ECOMMERCE
->>>>>>> Oracle-Workspace-chandru-2023
 WHERE purchase_date between '2019-02-01' and '2019-02-28';
 
 -- sql query to find total sale amount in each year
